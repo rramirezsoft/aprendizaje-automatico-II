@@ -1,0 +1,162 @@
+{
+  "name": "Asistente Personal - Busqueda y Calculo",
+  "nodes": [
+    {
+      "parameters": {
+        "options": {
+          "systemMessage": "# Rol\nEres un asistente personal inteligente y versatil. Tu nombre es AsistenteIA. Combinas conocimiento enciclopedico con capacidad de calculo matematico para ofrecer respuestas completas y precisas.\n\n# Tareas\n- Responder a la consulta del usuario: {{ $json.chatInput }}\n- Buscar informacion factual y verificada usando Wikipedia cuando sea necesario\n- Resolver operaciones matematicas usando la calculadora cuando el usuario lo requiera\n- Combinar busqueda de informacion y calculo cuando la pregunta lo exija (por ejemplo: buscar un dato numerico y operar con el)\n- Mantener el contexto de la conversacion para dar respuestas coherentes\n\n# Restricciones\n- Usa Wikipedia SIEMPRE que necesites datos factuales, fechas, cifras o informacion verificable. No inventes datos.\n- Usa Calculator SIEMPRE que necesites realizar operaciones matematicas, porcentajes o conversiones numericas. No calcules mentalmente.\n- Si una pregunta requiere ambas herramientas (buscar un dato y luego calcular), usa las dos en secuencia.\n- Si no encuentras informacion suficiente, indicalo honestamente al usuario.\n- Cita la fuente (Wikipedia) cuando proporciones datos factuales.\n- No respondas sobre temas que requieran informacion en tiempo real (cotizaciones, clima actual, noticias del dia).\n\n# Formato\n- Respuestas claras, estructuradas y concisas (maximo 250 palabras).\n- Usa viñetas o listas cuando presentes multiples datos.\n- Muestra los calculos paso a paso cuando uses la calculadora.\n- Si usaste Wikipedia, menciona \"Segun Wikipedia\" al citar datos.\n- Responde siempre en español."
+        }
+      },
+      "name": "AI Agent",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.7,
+      "position": [
+        288,
+        0
+      ],
+      "id": "caa0c2cd-f79f-486f-a841-0f1ea1cde67b"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "name": "When chat message received",
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        0,
+        0
+      ],
+      "webhookId": "asistente-personal-chat",
+      "id": "14b569e2-d83e-4ce0-b408-79f380ed074b"
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-2.5-flash-lite",
+        "options": {
+          "temperature": 0.4
+        }
+      },
+      "name": "Google Gemini Chat Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        192,
+        208
+      ],
+      "id": "0ed4b8d2-6c41-4715-8c6a-dc5a9349acad",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "5PXgNtsq8Ik7EQ0Z",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "contextWindowLength": 10
+      },
+      "name": "Window Buffer Memory",
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        320,
+        208
+      ],
+      "id": "eabc1aa6-c315-47e8-9f9c-d287d6a58f8b"
+    },
+    {
+      "parameters": {},
+      "name": "Wikipedia",
+      "type": "@n8n/n8n-nodes-langchain.toolWikipedia",
+      "typeVersion": 1,
+      "position": [
+        448,
+        208
+      ],
+      "id": "9ddb69ea-f3c5-46d2-a1d3-f8af2297d097"
+    },
+    {
+      "parameters": {},
+      "name": "Calculator",
+      "type": "@n8n/n8n-nodes-langchain.toolCalculator",
+      "typeVersion": 1,
+      "position": [
+        560,
+        208
+      ],
+      "id": "24c9dc6e-56d8-42e0-a566-a4ae5200910c"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Window Buffer Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wikipedia": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Calculator": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "versionId": "f9956934-0f23-40ce-a03f-0851ee28f22c",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "f36858a1595452b9aee74cc93c9d8b75afb124e5856a9adb8861d67056a81c07"
+  },
+  "id": "PasOwMZLfToDNNwU",
+  "tags": []
+}
