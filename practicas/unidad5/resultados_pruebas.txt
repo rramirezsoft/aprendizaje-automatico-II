@@ -1,0 +1,142 @@
+======================================================================
+CONSULTA 1: Cuantos dias de vacaciones tengo al año?
+======================================================================
+
+Documentos recuperados: 3
+
+  [1] politicas_rrhh.txt
+      2. VACACIONES Y PERMISOS
+Cada empleado dispone de 23 dias laborables de vacaciones al año. Las vacaciones
+deben solicitarse con al menos 15 dias de antelacion a traves del portal del
+empleado. No se pueden acumular mas de 5 dias de vacaciones de un año para otro.
+
+  [2] politicas_rrhh.txt
+      hasta 2 dias por semana, previa aprobacion del responsable directo.
+
+  [3] politicas_rrhh.txt
+      Los permisos por asuntos propios (maximo 3 dias al año) deben comunicarse con
+48 horas de antelacion.
+
+Respuesta:
+Cada empleado dispone de 23 días laborables de vacaciones al año. (Fuente: politicas_rrhh.txt)
+
+Tiempo: 1.21s
+
+======================================================================
+CONSULTA 2: Cual es el procedimiento para reportar una incidencia tecnica?
+======================================================================
+
+Documentos recuperados: 3
+
+  [1] procedimiento_soporte.txt
+      2. PROCESO DE REPORTE
+Para reportar una incidencia:
+a) Acceder al portal de soporte: soporte.techcorp.internal
+b) Seleccionar la categoria correspondiente (Hardware, Software, Red, Accesos)
+c) Describir el problema con el maximo detalle posible
+d) Adjuntar capturas de pantalla si es relevante
+
+  [2] procedimiento_soporte.txt
+      e) Indicar la urgencia y el impacto en el trabajo
+El sistema asignara automaticamente un numero de ticket y un tecnico responsable.
+
+  [3] procedimiento_soporte.txt
+      PROCEDIMIENTO DE SOPORTE TECNICO - TECHCORP
+
+Respuesta:
+Para reportar una incidencia técnica, debes seguir estos pasos:
+
+a) Acceder al portal de soporte: soporte.techcorp.internal
+b) Seleccionar la categoría correspondiente (Hardware, Software, Red, Accesos)
+c) Describir el problema con el máximo detalle posible
+d) Adjuntar capturas de pantalla si es relevante
+e) Indicar la urgencia y el impacto en el trabajo
+
+El sistema asignará automáticamente un número de ticket y un técnico responsable.
+
+(Fuente: procedimiento_soporte.txt)
+
+Tiempo: 1.64s
+
+======================================================================
+CONSULTA 3: Puedo trabajar desde casa todos los dias de la semana?
+======================================================================
+
+Documentos recuperados: 3
+
+  [1] politicas_rrhh.txt
+      hasta 2 dias por semana, previa aprobacion del responsable directo.
+
+  [2] politicas_rrhh.txt
+      3. TELETRABAJO
+La politica de teletrabajo permite hasta 2 dias semanales de trabajo remoto.
+Es obligatorio estar disponible en horario laboral y utilizar la VPN corporativa.
+Las reuniones de equipo presenciales son obligatorias los martes y jueves.
+
+  [3] politicas_rrhh.txt
+      1. HORARIO LABORAL
+El horario estandar es de 9:00 a 18:00, de lunes a viernes, con una hora para
+la comida. Se permite flexibilidad horaria de entrada entre las 8:00 y las 10:00,
+ajustando la hora de salida proporcionalmente. El trabajo en remoto esta permitido
+
+Respuesta:
+No, la política de teletrabajo permite hasta 2 días semanales de trabajo remoto. (Fuente: politicas_rrhh.txt)
+
+Tiempo: 1.20s
+
+======================================================================
+CONSULTA 4: Cual es el menu del comedor de la empresa?
+======================================================================
+
+Documentos recuperados: 3
+
+  [1] politicas_rrhh.txt
+      en las instalaciones de la empresa.
+
+  [2] politicas_rrhh.txt
+      6. CODIGO DE VESTIMENTA
+La empresa mantiene un codigo de vestimenta business casual. En reuniones con
+clientes externos se requiere vestimenta formal. Los viernes se permite vestimenta
+casual. No se permite el uso de chanclas, camisetas de tirantes o ropa deportiva
+
+  [3] politicas_rrhh.txt
+      1. HORARIO LABORAL
+El horario estandar es de 9:00 a 18:00, de lunes a viernes, con una hora para
+la comida. Se permite flexibilidad horaria de entrada entre las 8:00 y las 10:00,
+ajustando la hora de salida proporcionalmente. El trabajo en remoto esta permitido
+
+Respuesta:
+No dispongo de informacion sobre ese tema en la documentacion de la empresa. Te recomiendo contactar con el departamento correspondiente.
+
+Tiempo: 1.49s
+
+======================================================================
+CONSULTA 5: Cada cuanto tiempo debo cambiar mi contraseña?
+======================================================================
+
+Documentos recuperados: 3
+
+  [1] procedimiento_soporte.txt
+      5. POLITICA DE CONTRASEÑAS
+Las contraseñas deben cumplir los siguientes requisitos:
+- Minimo 12 caracteres
+- Al menos una mayuscula, una minuscula, un numero y un caracter especial
+- Cambio obligatorio cada 90 dias
+- No se pueden reutilizar las ultimas 5 contraseñas
+
+  [2] procedimiento_soporte.txt
+      - Tras 5 intentos fallidos, la cuenta se bloquea automaticamente
+Para desbloquear la cuenta, contactar con soporte tecnico presentando
+identificacion valida.
+
+  [3] procedimiento_soporte.txt
+      4. MANTENIMIENTO PROGRAMADO
+Los mantenimientos se realizan los domingos de 2:00 a 6:00. Se notifica a todos
+los empleados con al menos 48 horas de antelacion por email y en el portal.
+Durante el mantenimiento, los sistemas pueden no estar disponibles. En caso de
+
+Respuesta:
+El cambio de contraseña es obligatorio cada 90 días. (Fuente: procedimiento_soporte.txt)
+
+Tiempo: 0.93s
+
