@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "designpatterns": {
+      "command": "C:\\Users\\adarv\\Escritorio\\INSO\\INSO4\\aprendizaje_automatico_II\\venv\\Scripts\\python.exe",
+      "args": [
+        "C:\\Users\\adarv\\Escritorio\\INSO\\INSO4\\aprendizaje_automatico_II\\practicas\\practica_final\\src\\server.py"
+      ]
+    }
+  }
+}
